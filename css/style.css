@@ -10,11 +10,10 @@ body {
   width: 100%;
   display: block;
   box-sizing: border-box;
-  padding: 0 150px;
 }
 @media only screen and (max-width: 580px) {
   body {
-    padding: 0 5px;
+    width: 100%;
   }
 }
 
@@ -22,22 +21,41 @@ a {
   text-decoration: none;
 }
 
-.header {
+.header,
+main {
+  height: auto;
+  width: 100%;
+  display: block;
+  background: rgba(255, 144, 14, 0.1);
+  padding: 10px 150px;
+}
+@media only screen and (max-width: 580px) {
+  .header,
+  main {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+main {
+  background: #ffffff;
+}
+
+.headBar {
   height: auto;
   width: 100%;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
-  padding: 20px 0;
 }
-.header a {
+.headBar a {
   color: #000000;
 }
 @media only screen and (max-width: 580px) {
-  .header {
-    display: block;
-    text-align: center;
+  .headBar {
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
   }
 }
 
@@ -58,7 +76,7 @@ a {
 }
 @media only screen and (max-width: 580px) {
   .navBar ul {
-    display: block;
+    grid-template-columns: repeat(1, auto);
     margin-top: 20px;
   }
 }
@@ -70,10 +88,10 @@ a {
   font-size: 1.1rem;
 }
 .navBar ul li a:hover {
-  color: #ff0000;
+  color: #ff900e;
 }
 .navBar ul li:hover {
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 2px solid #ff900e;
 }
 @media only screen and (max-width: 580px) {
   .navBar ul li:hover {
@@ -133,7 +151,7 @@ a {
 }
 @media only screen and (max-width: 580px) {
   .contentGalary {
-    display: block;
+    grid-template-columns: repeat(1, auto);
   }
 }
 .contentGalary .imgContain {
@@ -141,11 +159,11 @@ a {
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, auto);
 }
 @media only screen and (max-width: 580px) {
   .contentGalary .imgContain {
-    display: block;
+    grid-template-columns: repeat(1, auto);
   }
 }
 
@@ -191,7 +209,7 @@ a {
 @media only screen and (max-width: 580px) {
   .infoContainer {
     padding: 20px 0;
-    display: block;
+    grid-template-columns: repeat(1, auto);
   }
 }
 
@@ -298,7 +316,8 @@ a {
 }
 @media only screen and (max-width: 580px) {
   .inline-ul {
-    display: block;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
     margin: 30px auto;
     width: 70%;
   }
@@ -314,7 +333,7 @@ a {
 }
 @media only screen and (max-width: 580px) {
   .inline-ul li {
-    padding: 20px 0;
+    padding: 20px 50px;
   }
   .inline-ul li:not(:last-child) {
     margin-bottom: 20px;
@@ -376,7 +395,7 @@ a {
 }
 @media only screen and (max-width: 580px) {
   .ideaContainer ul {
-    display: block;
+    grid-template-columns: repeat(1, auto);
     margin-top: 50px;
   }
 }
@@ -443,6 +462,11 @@ a {
   grid-template-columns: repeat(5, auto);
   grid-column-gap: 5%;
 }
+@media only screen and (max-width: 580px) {
+  .fixed-ul {
+    grid-template-columns: repeat(1, auto);
+  }
+}
 .fixed-ul li {
   padding: 10px 15px;
   border: none;
@@ -475,6 +499,12 @@ a {
   }
 }
 .footer p {
-  display: inline;
+  height: auto;
+  width: 80%;
+  display: block;
+  padding: 20px 0;
+  margin: 0 auto;
+  font-size: 1rem;
   color: #848484;
+  background: rgba(255, 144, 14, 0.1);
 }
