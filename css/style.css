@@ -12,6 +12,11 @@ body {
   box-sizing: border-box;
   padding: 0 150px;
 }
+@media only screen and (max-width: 580px) {
+  body {
+    padding: 0 5px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -29,6 +34,12 @@ a {
 .header a {
   color: #000000;
 }
+@media only screen and (max-width: 580px) {
+  .header {
+    display: block;
+    text-align: center;
+  }
+}
 
 .navBar {
   height: auto;
@@ -45,6 +56,12 @@ a {
   grid-column-gap: 1%;
   list-style: none;
 }
+@media only screen and (max-width: 580px) {
+  .navBar ul {
+    display: block;
+    margin-top: 20px;
+  }
+}
 .navBar ul li {
   border: 2px solid transparent;
   padding: 10px 15px;
@@ -57,6 +74,11 @@ a {
 }
 .navBar ul li:hover {
   border-bottom: 2px solid #ff0000;
+}
+@media only screen and (max-width: 580px) {
+  .navBar ul li:hover {
+    border-bottom: 2px solid transparent;
+  }
 }
 
 .title {
@@ -109,6 +131,11 @@ a {
   align-items: center;
   grid-template-columns: repeat(2, auto);
 }
+@media only screen and (max-width: 580px) {
+  .contentGalary {
+    display: block;
+  }
+}
 .contentGalary .imgContain {
   height: auto;
   width: 100%;
@@ -116,10 +143,20 @@ a {
   align-items: center;
   grid-template-columns: auto auto;
 }
+@media only screen and (max-width: 580px) {
+  .contentGalary .imgContain {
+    display: block;
+  }
+}
 
 .imgContain img {
   width: 100%;
   padding: 6px;
+}
+@media only screen and (max-width: 580px) {
+  .imgContain img {
+    height: 300px;
+  }
 }
 
 .detailsContent {
@@ -128,6 +165,11 @@ a {
   display: block;
   margin: 0 auto;
   padding: 10px;
+}
+@media only screen and (max-width: 580px) {
+  .detailsContent {
+    margin: 20px auto;
+  }
 }
 .detailsContent .title span:first-child {
   color: #848484;
@@ -144,7 +186,13 @@ a {
   grid-template-columns: 45% 54%;
   grid-column-gap: 1%;
   padding: 45px 0;
-  margin: 3rem 0;
+  margin: 20px 0 40px;
+}
+@media only screen and (max-width: 580px) {
+  .infoContainer {
+    padding: 20px 0;
+    display: block;
+  }
 }
 
 .contentInfo {
@@ -198,6 +246,11 @@ a {
 .contentInfoPic img {
   width: 100%;
 }
+@media only screen and (max-width: 580px) {
+  .contentInfoPic img {
+    margin-top: 20px;
+  }
+}
 
 .priBtn_position {
   font-size: 1.8rem;
@@ -205,6 +258,16 @@ a {
   position: absolute;
   bottom: -6%;
   left: -10%;
+}
+@media only screen and (max-width: 580px) {
+  .priBtn_position {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .logoContent {
@@ -217,6 +280,11 @@ a {
   width: 40%;
   display: block;
 }
+@media only screen and (max-width: 580px) {
+  .logoContent .logoDetails {
+    width: 100%;
+  }
+}
 
 .inline-ul {
   height: auto;
@@ -228,14 +296,29 @@ a {
   margin: 60px auto;
   list-style: none;
 }
+@media only screen and (max-width: 580px) {
+  .inline-ul {
+    display: block;
+    margin: 30px auto;
+    width: 70%;
+  }
+}
 .inline-ul li {
   text-align: center;
-  padding: 30px 30px;
+  padding: 30px;
   line-height: 1.5;
   color: #848484;
   border-radius: 8px;
   border: 2px solid #ff900e;
   transition: width 1s, transform 1s;
+}
+@media only screen and (max-width: 580px) {
+  .inline-ul li {
+    padding: 20px 0;
+  }
+  .inline-ul li:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 .inline-ul li div {
   opacity: 0.5;
@@ -267,13 +350,19 @@ a {
   transform-origin: right;
 }
 
+@media only screen and (max-width: 580px) {
+  .transfrom-left,
+  .transfrom-center,
+  .transfrom-right {
+    transform-origin: center;
+  }
+}
 .transfrom-left:hover,
 .transfrom-center:hover,
 .transfrom-right:hover {
   transform: scaleX(1.2);
   border: 2px solid #848484;
   background: #ff900e;
-  padding: 30px 40px;
 }
 
 .ideaContainer ul {
@@ -285,9 +374,21 @@ a {
   list-style: none;
   grid-column-gap: 4%;
 }
+@media only screen and (max-width: 580px) {
+  .ideaContainer ul {
+    display: block;
+    margin-top: 50px;
+  }
+}
 .ideaContainer ul li {
   padding: 50px 0;
   height: 300px;
+}
+@media only screen and (max-width: 580px) {
+  .ideaContainer ul li {
+    padding: 35px 0;
+    height: 250px;
+  }
 }
 
 .ideaContent {
@@ -303,6 +404,12 @@ a {
   border-radius: 50%;
   position: absolute;
   top: -40px;
+}
+@media only screen and (max-width: 580px) {
+  .ideaContent img {
+    height: 75px;
+    width: 75px;
+  }
 }
 .ideaContent p {
   text-indent: 30px;
@@ -340,8 +447,18 @@ a {
   padding: 10px 15px;
   border: none;
 }
+@media only screen and (max-width: 580px) {
+  .fixed-ul li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 .fixed-ul li img {
   filter: grayscale(100%);
+}
+@media only screen and (max-width: 580px) {
+  .fixed-ul li img {
+    width: 30%;
+  }
 }
 .fixed-ul li:hover img {
   filter: grayscale(0%);
@@ -351,6 +468,11 @@ a {
   display: block;
   margin: 100px auto;
   text-align: center;
+}
+@media only screen and (max-width: 580px) {
+  .footer {
+    margin: 50px auto;
+  }
 }
 .footer p {
   display: inline;
