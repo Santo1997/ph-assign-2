@@ -384,6 +384,11 @@ main {
   background: #ff900e;
 }
 
+.ideaContainer .title-center {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .ideaContainer ul {
   height: auto;
   width: 100%;
@@ -417,6 +422,7 @@ main {
   position: relative;
   background: #383636;
 }
+
 .ideaContent img {
   height: 85px;
   width: 85px;
